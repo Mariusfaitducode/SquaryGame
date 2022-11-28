@@ -26,8 +26,9 @@ public class Introlab2 : MonoBehaviour
     public IEnumerator subdelay()
     {
         yield return new WaitForSeconds(3.5f);
-        camintro.SetActive(false);
         camMain.SetActive(true);
+        camintro.SetActive(false);
+        
         //minigame.gameObject.SetActive(true);
     }
 }
