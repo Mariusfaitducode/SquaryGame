@@ -8,6 +8,7 @@ public class square_pointless : MonoBehaviour
     public float speed = 0.5f;
     
     public GameObject perso;
+    public GameObject perso3D;
     public GameObject labyrinthe;
 
     public GameObject createGame;
@@ -22,8 +23,12 @@ public class square_pointless : MonoBehaviour
 
         if (start)
         {
+            perso3D.transform.position = perso.transform.position;
+            
+            
             labyrinthe.SetActive(true);
-            perso.SetActive(true);
+            perso3D.SetActive(true);
+            
             createGame.SetActive(false);
             gameDetector.SetActive(false);
         }

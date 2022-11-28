@@ -40,7 +40,7 @@ public class Labyrinthe3D : MonoBehaviour
                     Vector3 scale;
                     
                     // Compute position
-                    float height = Random.Range(1f, 100f);
+                    float height = Random.Range(1f, 60f);
                     position.x = (l * (Constants.CaseSize )) - Constants.MapWidth * Constants.CaseSize / 2 + Constants.CaseSize / 2;
                     position.y = height / 2;
                     position.z = (c/2 * (Constants.CaseSize )) - Constants.MapHeight * Constants.CaseSize / 2 + Constants.CaseSize / 2;

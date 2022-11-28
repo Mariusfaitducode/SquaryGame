@@ -140,22 +140,22 @@ public class ButtonCreateSeg : MonoBehaviour
     }
     public void Button_1_right()
     {
-        ButtonClicked(1, new Vector2(78, 85));
+        ButtonClicked(1, new Vector2(78, -5));
     }
     public void Button_2_right()
     {
-        ButtonClicked(2, new Vector2(78, 40));
+        ButtonClicked(2, new Vector2(78, -95));
     }
     public void Button_3_right()
     {
-        ButtonClicked(3, new Vector2(78, -5));
+        ButtonClicked(3, new Vector2(78, 40));
     }
     public void Button_4_right()
     {
-        ButtonClicked(4, new Vector2(78, -50));
+        ButtonClicked(4, new Vector2(78, 85));
     }
     public void Button_5_right()
     {
-        ButtonClicked(5, new Vector2(78, -95));
+        ButtonClicked(5, new Vector2(78, -50));
     }
 }
