@@ -1,4 +1,5 @@
 
+    using System;
     using UnityEngine;
     using UnityEngine.UI;
     using TMPro;
@@ -7,6 +8,14 @@
     {
         [SerializeField] 
         private TMP_Text _title;
+
+        private EnigmeHexa enigme;
+
+        private void Start()
+        {
+            GameObject obj = GameObject.Find("Enigme");
+            enigme = obj.GetComponent<EnigmeHexa>();
+        }
 
         public void OnButtonClick()
         {
@@ -17,6 +26,7 @@
                 }
                 else {
                     _title.text = "*";
+                    enigme.index = 1;
                 }
             }else {
                 _title.text = string.Empty;
@@ -24,8 +34,7 @@
 
         }
         public void OnButtonClickValidate() { 
-            GameObject obj = GameObject.Find("Enigme");
-            EnigmeHexa enigme = obj.GetComponent<EnigmeHexa>();
+            
             if (enigme.Validate()) {
                 _title.text = "SUCCES   ";
             } 

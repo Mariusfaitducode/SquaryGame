@@ -16,21 +16,31 @@ public class square_pointless : MonoBehaviour
     public bool start = false;
 
 
-    public IEnumerator Delay()
+    public IEnumerator Delay(float sec)
     {
-        yield return new WaitForSeconds(1f);
-        
-        start = true;
+        yield return new WaitForSeconds(sec);
+
+        if (start)
+        {
+            labyrinthe.SetActive(true);
+            perso.SetActive(true);
+            createGame.SetActive(false);
+            gameDetector.SetActive(false);
+        }
+        else
+        {
+            start = true;
+        }
     }
 
-    void WaitToPlay()
+    void WaitToPlay(float sec)
     {
-        StartCoroutine(Delay());
+        StartCoroutine(Delay(sec));
     }
     private void Start()
     {
         transform.localScale = new Vector3(0.01f, 0.01f, 0.01f);
-        WaitToPlay();
+        WaitToPlay(1f);
     }
 
     // Update is called once per frame
@@ -68,12 +78,10 @@ public class square_pointless : MonoBehaviour
                 (float)Math.Abs(transform.localScale.z) > 0.216f)
             {
                 print("valide");
-            
-                labyrinthe.SetActive(true);
-                perso.SetActive(true);
-                createGame.SetActive(false);
-                gameDetector.SetActive(false);
-                WaitToPlay();
+
+                WaitToPlay(1.5f);
+                
+                
             }
         }
         

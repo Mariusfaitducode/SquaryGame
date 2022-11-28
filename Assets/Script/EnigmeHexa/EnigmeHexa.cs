@@ -7,13 +7,13 @@ public class EnigmeHexa : MonoBehaviour
     // Start is called before the first frame update
     public int[] combination;
     public int[] solution = {1,2,7,2,5,5,2,1,2};
-    private int index = 0;
+    public int index = 0;
 
     public GameObject door;
     public Canvas canvas;
 
     public void Start() {
-        Debug.Log("ahhhh");
+        
         combination = new int[9];
     }
     int numberFromName(string name) {
@@ -40,6 +40,7 @@ public class EnigmeHexa : MonoBehaviour
         if (index != solution.Length) {
             print(index);
             print(solution.Length);
+            index = 0;
             return false;
         }
         for (int i=0; i < solution.Length; i++) {
