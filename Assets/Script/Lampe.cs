@@ -6,6 +6,8 @@ using UnityEngine.PlayerLoop;
 
 public class Lampe : MonoBehaviour
 {
+    public GameObject lampe;
+    
     public Camera mainCamera;
 
     public bool moveCam;
@@ -33,6 +35,7 @@ public class Lampe : MonoBehaviour
             else
             {
                 moveCam = false;
+                lampe.SetActive(false);
             }
         }
     }

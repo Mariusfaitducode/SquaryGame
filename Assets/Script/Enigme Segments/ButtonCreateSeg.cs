@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class ButtonCreateSeg : MonoBehaviour
 {
     public GameObject door;
+    public Canvas canvas;
     
     public bool firstClick = false;
 
@@ -59,6 +60,7 @@ public class ButtonCreateSeg : MonoBehaviour
             }
         }
 
+        canvas.gameObject.SetActive(false);
         return true;
     }
 
