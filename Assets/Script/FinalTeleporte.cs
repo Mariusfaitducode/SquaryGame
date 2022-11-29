@@ -43,7 +43,7 @@ public class FinalTeleporte : MonoBehaviour
             else
             {
                 print(camera.transform.position);
-                if (camera.transform.position.y - perso.transform.position.y > 0.55f)
+                if (camera.transform.position.y - perso.transform.position.y > 0.6f)
                     camera.transform.Translate(new Vector3(0, 0, 1) * Time.deltaTime * 0.5f);
 
                 else
